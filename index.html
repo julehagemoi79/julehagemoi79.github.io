@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BP CONSULT LTD | Management Consultancy</title>
+    <style>
+        /* CSS Variables & Reset */
+        :root {
+            --primary: #1a1a1a;
+            --accent: #0052FF;
+            --bg: #ffffff;
+            --surface: #f5f5f7;
+            --text-muted: #666666;
+            --border: #e5e5e5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 5% 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: var(--accent);
+        }
+
+        /* Services Section (Grid) */
+        .services {
+            padding: 5rem 5%;
+            background-color: var(--surface);
+        }
+
+        .section-label {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .address-box {
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 24px;
+        }
+
+        .address-box h4 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 5%;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact { grid-template-columns: 1fr; }
+            .hero { padding-top: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BP<span>CONSULT</span></div>
+        <a href="#kontak" class="btn" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Hubungi</a>
+    </nav>
+
+    <section class="hero">
+        <span class="section-label">Arah Strategis Baru</span>
+        <h1>Membangun Fondasi Bisnis Yang Tangguh.</h1>
+        <p>BP Consult Ltd memberikan bimbingan strategis untuk membantu organisasi mengoptimalkan operasional dan mencapai pertumbuhan berkelanjutan.</p>
+        <a href="#layanan" class="btn">Eksplorasi Layanan</a>
+    </section>
+
+    <section id="layanan" class="services">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <span class="section-label">Layanan Kami</span>
+            <h2>Keahlian Konsultasi Kami</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Strategi Bisnis</h3>
+                    <p>Membantu perusahaan merumuskan visi jangka panjang dan rencana aksi yang terukur untuk menghadapi persaingan pasar.</p>
+                </div>
+                <div class="card">
+                    <h3>Efisiensi Operasional</h3>
+                    <p>Audit proses internal untuk mengidentifikasi hambatan dan meningkatkan produktivitas tim secara menyeluruh.</p>
+                </div>
+                <div class="card">
+                    <h3>Kebijakan Pemasaran</h3>
+                    <p>Analisis tren pasar dan pengembangan strategi posisi merek yang efektif untuk menjangkau target audiens yang tepat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="contact">
+        <div>
+            <span class="section-label">Tentang Kami</span>
+            <h2>Berlokasi di Jantung Accrington.</h2>
+            <p style="margin-top: 1.5rem; color: var(--text-muted);">Sebagai firma konsultasi yang berbasis di Inggris, kami berfokus pada hasil nyata. Kami percaya bahwa setiap bisnis memiliki potensi unik yang dapat dimaksimalkan melalui pendekatan manajemen yang disiplin dan inovatif.</p>
+        </div>
+        <div class="address-box">
+            <h4>Kantor Terdaftar:</h4>
+            <p><strong>BP CONSULT LTD</strong></p>
+            <address style="font-style: normal; margin-top: 10px; color: var(--text-muted);">
+                18 Garbett Street<br>
+                ACCRINGTON<br>
+                BB5 0QJ<br>
+                United Kingdom
+            </address>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BP CONSULT LTD. Registrasi Inggris (No. 17039817).</p>
+        <p style="margin-top: 0.5rem;">Kontak: <a href="mailto:testdevtool@gmail.com" style="color: var(--accent); text-decoration: none;">testdevtool@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
